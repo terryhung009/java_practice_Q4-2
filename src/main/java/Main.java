@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         int totalMoney = 137;
@@ -6,12 +8,14 @@ public class Main {
         int numberOneDollar;
         int i;
 
+        System.out.print("請輸入總金額； ");
+        Scanner sc = new Scanner(System.in);
+        totalMoney = sc.nextInt();
 
-        //10元可從0~13個，5元可從0~26個
-//        10 * numberTenDollar + 5 * numberFiveDollar + numberOneDollar == 137;
 
-        numberTenDollar = 137 / 10;
-        i = 137 % 10;
+
+        numberTenDollar = totalMoney / 10;
+        i = totalMoney % 10;
         numberFiveDollar = i / 5;
         numberOneDollar = i % 5;
 
